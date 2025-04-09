@@ -47,3 +47,7 @@ def question_to_file(filename, question_data):
         file.write("d) " + question_data['d'] + "\n")
         file.write("Correct Answer: " + question_data['correct'] + "\n")
         file.write("-" * 40 + "\n")
+
+
+if __name__ == "__main__":
+    main()
