@@ -28,7 +28,11 @@
 #   print "Do you want to add another question? (yes/no): "
 #   repeat process if user inputs yes
 #   break if user inputs no
-# "
+#
+# end process
+#  print "Done! Questions saved. "
+# 
+# END"
 
 #converting users input to txt file
 def question_to_file(filename, question_data):
