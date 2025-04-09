@@ -35,3 +35,8 @@ def main():
         if cont != 'yes':
             print("Exiting. Questions saved to", filename)
             break
+
+
+#converting users input to txt file
+def question_to_file(filename, question_data):
+    with open(filename, "a") as file:
