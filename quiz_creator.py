@@ -15,6 +15,9 @@
 #   print "Enter answer for d: "
 #       user input answer for d
 # 
+# ask user which anser is correct between a/b/c/d
+# returns invalid if none of the 4 letters were inputted
+# 
 # "
 
 #converting users input to txt file
