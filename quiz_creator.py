@@ -1,6 +1,22 @@
 #Create a program that ask user for a question, it will also ask for 4 possible answer (a,b,c,d) and the correct answer. Write the collected data to a text file. Ask another question until the user chose to exit.
 #pseudocode
 
+#" START
+# set filename to questions.txt
+# ask for user input (question, choices, and correct answer) and repeat process until user ends loop
+#   print "Enter your question: "
+#   user input question
+#   print "Enter answer for a: "
+#       user input answer for a
+#   print "Enter answer for b: "
+#       user input answer for b
+#   print "Enter answer for c: "
+#       user input answer for c
+#   print "Enter answer for d: "
+#       user input answer for d
+# 
+# "
+
 #converting users input to txt file
 def question_to_file(filename, question_data):
     with open(filename, "a") as file:
