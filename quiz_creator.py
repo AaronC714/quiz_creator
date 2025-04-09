@@ -30,3 +30,8 @@ def main():
         }
 
         question_to_file(filename, question_data)
+
+        cont = input("Do you want to add another question? (yes/no): ").lower()
+        if cont != 'yes':
+            print("Exiting. Questions saved to", filename)
+            break
