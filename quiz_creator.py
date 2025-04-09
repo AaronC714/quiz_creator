@@ -23,6 +23,11 @@
 #   write question, choices (a,b,c,d), and correct answer
 #   write separator
 #   close file
+# 
+# ask user if they want to add another question
+#   print "Do you want to add another question? (yes/no): "
+#   repeat process if user inputs yes
+#   break if user inputs no
 # "
 
 #converting users input to txt file
