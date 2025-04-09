@@ -12,3 +12,10 @@ def main():
         b = input("Answer b: ")
         c = input("Answer c: ")
         d = input("Answer d: ")
+
+        # Ensure correct answer is valid
+        while True:
+            correct = input("Which is the correct answer? (a/b/c/d): ").lower()
+            if correct in ['a', 'b', 'c', 'd']:
+                break
+            print("Invalid input. Please enter one of a, b, c, or d.")
