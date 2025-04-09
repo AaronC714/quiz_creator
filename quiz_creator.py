@@ -7,3 +7,8 @@ def main():
     while True:
         print("\nEnter your multiple choice question:")
         question = input("Question: ")
+
+        a = input("Answer a: ")
+        b = input("Answer b: ")
+        c = input("Answer c: ")
+        d = input("Answer d: ")
