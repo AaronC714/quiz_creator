@@ -19,3 +19,14 @@ def main():
             if correct in ['a', 'b', 'c', 'd']:
                 break
             print("Invalid input. Please enter one of a, b, c, or d.")
+
+        question_data = {
+            'question': question,
+            'a': a,
+            'b': b,
+            'c': c,
+            'd': d,
+            'correct': correct
+        }
+
+        question_to_file(filename, question_data)
