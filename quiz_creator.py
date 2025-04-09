@@ -40,3 +40,10 @@ def main():
 #converting users input to txt file
 def question_to_file(filename, question_data):
     with open(filename, "a") as file:
+        file.write("Question: " + question_data['question'] + "\n")
+        file.write("a) " + question_data['a'] + "\n")
+        file.write("b) " + question_data['b'] + "\n")
+        file.write("c) " + question_data['c'] + "\n")
+        file.write("d) " + question_data['d'] + "\n")
+        file.write("Correct Answer: " + question_data['correct'] + "\n")
+        file.write("-" * 40 + "\n")
