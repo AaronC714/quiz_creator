@@ -18,6 +18,11 @@
 # ask user which anser is correct between a/b/c/d
 # returns invalid if none of the 4 letters were inputted
 # 
+# convert quiz to text file
+#   open file questions.txt in append "a" 
+#   write question, choices (a,b,c,d), and correct answer
+#   write separator
+#   close file
 # "
 
 #converting users input to txt file
