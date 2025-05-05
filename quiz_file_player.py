@@ -16,3 +16,6 @@ def load_questions(filename):
     if not os.path.exists(filename):
         print(Fore.RED + "⚠️ No quiz file found.")
         return []
+    
+    with open(filename, "r") as file:
+        content = file.read().strip()
