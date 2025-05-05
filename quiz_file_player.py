@@ -56,4 +56,6 @@ def play_quiz(questions):
     title = "🎉 Welcome to the Random Quiz Challenge! 🎉"
     print ("\n" + title.center(70, " "))
     print ("Answer the questions below and test your knowledge!\n".center(70))
-    
+
+    random.shuffle(questions)
+    score = 0
