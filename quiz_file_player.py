@@ -82,3 +82,15 @@ def play_quiz(questions):
 
         sleep(1.5)
         clear_screen()
+
+    
+    #Final Score
+    print("\n" + "=" * 70)
+    print(Fore.MAGENTA + f"🏁 Quiz Over! You scored {score} out of {len(questions)}.\n")
+    if score == len(questions):
+        print(Fore.GREEN + "🌟 Perfect score! You're a quiz master!")
+    elif score >= len(questions) // 2:
+        print(Fore.CYAN + "💡 Good job! Keep practicing.")
+    else:
+        print(Fore.YELLOW + "📚 Keep studying and try again!")
+    print("=" * 70 + "\n")
