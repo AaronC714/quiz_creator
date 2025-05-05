@@ -51,3 +51,9 @@ def play_quiz(questions):
     if not questions:
         print("No questions found for the quiz")
         return
+    
+    clear_screen()
+    title = "🎉 Welcome to the Random Quiz Challenge! 🎉"
+    print ("\n" + title.center(70, " "))
+    print ("Answer the questions below and test your knowledge!\n".center(70))
+    
