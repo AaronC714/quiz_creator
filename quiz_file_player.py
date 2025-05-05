@@ -36,3 +36,12 @@ def load_questions(filename):
             'choice c': lines[3].replace("c) ", ""),
             'choice d': lines[4].replace("d) ", "")
         }
+        correct = lines[5].replace("Correct Answer: ", "").lower()
+
+        questions.append({
+            'question': ques_text,
+            'choices': choices,
+            'correct': correct
+        })
+
+    return questions
