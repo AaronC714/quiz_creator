@@ -24,7 +24,15 @@ def load_questions(filename):
     questions = []
 
     #skip incompete blocks
-    for raw_q in raw_questions:
-        lines = [line.strip() for line in raw_q.strip().split("\n") if line.strip()]
+    for raw_ques in raw_questions:
+        lines = [line.strip() for line in raw_ques.strip().split("\n") if line.strip()]
         if len(lines) < 6:
             continue
+
+        ques_text = lines[0].replace("Question: ", "")
+        choices = {
+            'choice a': lines[1].replace("a) ", ""),
+            'chocie b': lines[2].replace("b) ", ""),
+            'choice c': lines[3].replace("c) ", ""),
+            'choice d': lines[4].replace("d) ", "")
+        }
