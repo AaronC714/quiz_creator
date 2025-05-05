@@ -45,3 +45,9 @@ def load_questions(filename):
         })
 
     return questions
+
+#play quiz
+def play_quiz(questions):
+    if not questions:
+        print("No questions found for the quiz")
+        return
