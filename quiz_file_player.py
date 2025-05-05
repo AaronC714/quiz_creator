@@ -65,3 +65,10 @@ def play_quiz(questions):
         print(Fore.CYAN + f"Question {i}: {q['question']}\n")
         for option, text in q['choices'].items():
             print(f"  {option}) {text}")
+
+        print("\n" + "-" * 70)
+        while True:
+            answer = input(Fore.YELLOW + "Your answer (a/b/c/d): ").lower()
+            if answer in ['a', 'b', 'c', 'd']:
+                break
+            print(Fore.RED + "❌ Invalid choice. Please select a, b, c, or d.")
