@@ -94,3 +94,12 @@ def play_quiz(questions):
     else:
         print(Fore.YELLOW + "📚 Keep studying and try again!")
     print("=" * 70 + "\n")
+
+# Main entry
+def main():
+    filename = "questions.txt"
+    questions = load_questions(filename)
+    play_quiz(questions)
+
+if __name__ == "__main__":
+    main()
