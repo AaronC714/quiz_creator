@@ -19,3 +19,6 @@ def load_questions(filename):
     
     with open(filename, "r") as file:
         content = file.read().strip()
+
+    raw_questions = content.split("-" * 40)
+    questions = []
