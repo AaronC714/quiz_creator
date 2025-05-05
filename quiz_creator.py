@@ -37,6 +37,8 @@
 
 
 #converting users input to txt file
+import os
+
 def question_to_file(filename, question_data):
     with open(filename, "a") as file:
         file.write("Question: " + question_data['question'] + "\n")
@@ -47,20 +49,20 @@ def question_to_file(filename, question_data):
         file.write("Correct Answer: " + question_data['correct'] + "\n")
         file.write("-" * 40 + "\n")
 
-#user input of questions, choices, and answers
 def main():
-    filename = "questions.txt"
+    # Get the Desktop path for the current user
+    desktop_path = os.path.join(os.path.expanduser("~"), "Desktop")
+    filename = os.path.join(desktop_path, "quiz.txt")
     
     while True:
         print("\nEnter your multiple choice question:")
         question = input("Question: ")
 
-        a = input("Answer a: ")
-        b = input("Answer b: ")
-        c = input("Answer c: ")
-        d = input("Answer d: ")
+        choice_a = input("Answer a: ")
+        choice_b = input("Answer b: ")
+        choice_c = input("Answer c: ")
+        choice_d = input("Answer d: ")
 
-        # Ensure correct answer is valid
         while True:
             correct = input("Which is the correct answer? (a/b/c/d): ").lower()
             if correct in ['a', 'b', 'c', 'd']:
@@ -69,10 +71,10 @@ def main():
 
         question_data = {
             'question': question,
-            'a': a,
-            'b': b,
-            'c': c,
-            'd': d,
+            'a': choice_a,
+            'b': choice_b,
+            'c': choice_c,
+            'd': choice_d,
             'correct': correct
         }
 
