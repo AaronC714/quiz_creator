@@ -79,3 +79,6 @@ def play_quiz(questions):
         else:
             correct_option = ques['correct']
             print(Fore.RED + f"❌ Incorrect. The correct answer was '{correct_option}) {ques['choices'][correct_option]}'")
+
+        sleep(1.5)
+        clear_screen()
