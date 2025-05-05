@@ -22,3 +22,9 @@ def load_questions(filename):
 
     raw_questions = content.split("-" * 40)
     questions = []
+
+    #skip incompete blocks
+    for raw_q in raw_questions:
+        lines = [line.strip() for line in raw_q.strip().split("\n") if line.strip()]
+        if len(lines) < 6:
+            continue
