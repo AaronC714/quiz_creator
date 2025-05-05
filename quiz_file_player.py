@@ -59,3 +59,9 @@ def play_quiz(questions):
 
     random.shuffle(questions)
     score = 0
+
+    for index, questions in enumerate(questions, start=1):
+        print(Style.BRIGHT + f"\n{'='*70}")
+        print(Fore.CYAN + f"Question {i}: {q['question']}\n")
+        for option, text in q['choices'].items():
+            print(f"  {option}) {text}")
