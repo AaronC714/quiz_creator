@@ -60,10 +60,10 @@ def play_quiz(questions):
     random.shuffle(questions)
     score = 0
 
-    for index, questions in enumerate(questions, start=1):
+    for index, ques in enumerate(questions, start=1):
         print(Style.BRIGHT + f"\n{'='*70}")
-        print(Fore.CYAN + f"Question {i}: {q['question']}\n")
-        for option, text in q['choices'].items():
+        print(Fore.CYAN + f"Question {index}: {ques['question']}\n")
+        for option, text in ques['choices'].items():
             print(f"  {option}) {text}")
 
         print("\n" + "-" * 70)
@@ -72,3 +72,10 @@ def play_quiz(questions):
             if answer in ['a', 'b', 'c', 'd']:
                 break
             print(Fore.RED + "❌ Invalid choice. Please select a, b, c, or d.")
+        
+        if answer == ques['correct']:
+            print(Fore.GREEN + "✅ Correct!")
+            score += 1
+        else:
+            correct_option = ques['correct']
+            print(Fore.RED + f"❌ Incorrect. The correct answer was '{correct_option}) {ques['choices'][correct_option]}'")
