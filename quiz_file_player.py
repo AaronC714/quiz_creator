@@ -8,6 +8,14 @@
     #ELSE
         #EXECUTE "clear" command
 
+#DEFINE FUNCTION get_quiz_file_path
+    #RETURN path to "question.txt" on user's Desktop
+
+#DEFINE FUNCTION load_questions(filename)
+    #IF file does not exist
+        #DISPLAY error message
+        #RETURN empty list
+
 import random
 import os
 import sys
