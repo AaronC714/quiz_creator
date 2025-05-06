@@ -9,7 +9,11 @@ init(autoreset=True)
 
 #cross-platform
 def clear_screen():
-    os.system('cls' if os.name == 'int' else 'clear')
+    os.system("cls" if os.name == "nt" else "clear")
+
+def get_quiz_file_path():
+    desktop_path = os.path.join(os.path.expanduser("~"), "Desktop")
+    return os.path.join(desktop_path, "quiz.txt")
 
 #get questions from txt file
 def load_questions(filename):
@@ -17,7 +21,7 @@ def load_questions(filename):
         print(Fore.RED + "⚠️ No quiz file found.")
         return []
     
-    with open(filename, "r") as file:
+    with open(filename, "r", encoding="utf-8") as file:
         content = file.read().strip()
 
     raw_questions = content.split("-" * 40)
@@ -31,10 +35,10 @@ def load_questions(filename):
 
         ques_text = lines[0].replace("Question: ", "")
         choices = {
-            'choice a': lines[1].replace("a) ", ""),
-            'chocie b': lines[2].replace("b) ", ""),
-            'choice c': lines[3].replace("c) ", ""),
-            'choice d': lines[4].replace("d) ", "")
+            'a': lines[1].replace("a) ", ""),
+            'b': lines[2].replace("b) ", ""),
+            'c': lines[3].replace("c) ", ""),
+            'd': lines[4].replace("d) ", "")
         }
         correct = lines[5].replace("Correct Answer: ", "").lower()
 
@@ -97,7 +101,7 @@ def play_quiz(questions):
 
 # Main entry
 def main():
-    filename = "questions.txt"
+    filename = get_quiz_file_path()
     questions = load_questions(filename)
     play_quiz(questions)
 
