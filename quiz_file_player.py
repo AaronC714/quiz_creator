@@ -16,6 +16,14 @@
         #DISPLAY error message
         #RETURN empty list
 
+    #OPEN file and read content
+    #SPLIT content into blocks by "----------------------------------------"
+
+    #FOR each block in content
+        #SPLIT block into lines and strip whitespace
+        #IF number of valid lines < 6
+            #SKIP block
+
 import random
 import os
 import sys
