@@ -64,6 +64,15 @@
 
     #DISPLAY final score and feedback message
 
+#DEFINE FUNCTION main
+    #CALL get_quiz_file_path to get file path
+    #CALL load_questions with file path
+    #CALL play_quiz with loaded questions
+
+#CALL main
+
+#END
+
 import random
 import os
 import sys
