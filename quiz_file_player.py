@@ -28,6 +28,14 @@
         #EXTRACT answer choices from lines 1 to 4, remove "a) ", "b) ", etc.
         #EXTRACT correct answer letter from line 5
 
+        #CREATE dictionary with:
+            #question text
+            #choices (keyed by 'a', 'b', 'c', 'd')
+            #correct answer key
+
+        #ADD dictionary to question list
+
+    #RETURN list of questions
 import random
 import os
 import sys
