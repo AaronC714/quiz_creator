@@ -1,3 +1,13 @@
+#START
+
+#INITIALIZE colorama for colored text output
+
+#DEFINE FUNCTION clear_screen
+    #IF operating system is Windows
+        #EXECUTE "cls" command
+    #ELSE
+        #EXECUTE "clear" command
+
 import random
 import os
 import sys
@@ -82,7 +92,7 @@ def play_quiz(questions):
             score += 1
         else:
             correct_option = ques['correct']
-            print(Fore.RED + f"❌ Incorrect. The correct answer was '{correct_option}) {ques['choices'][correct_option]}'")
+            print(Fore.RED + f"❌ Incorrect. The correct answer was '{ques['choices'][correct_option]}'")
 
         sleep(1.5)
         clear_screen()
