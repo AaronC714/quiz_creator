@@ -24,6 +24,10 @@
         #IF number of valid lines < 6
             #SKIP block
 
+        #EXTRACT question from line 0
+        #EXTRACT answer choices from lines 1 to 4, remove "a) ", "b) ", etc.
+        #EXTRACT correct answer letter from line 5
+
 import random
 import os
 import sys
