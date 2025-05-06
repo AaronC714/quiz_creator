@@ -36,6 +36,34 @@
         #ADD dictionary to question list
 
     #RETURN list of questions
+
+#DEFINE FUNCTION play_quiz(questions)
+    #IF questions list is empty
+        #DISPLAY message and EXIT
+
+    #CLEAR screen
+    #DISPLAY welcome message
+    #RANDOMLY shuffle questions
+
+    #SET score to 0
+
+    #FOR each question in questions
+        #DISPLAY question number and text
+        #DISPLAY all answer choices
+
+        #PROMPT user for input until 'a', 'b', 'c', or 'd' is entered
+
+        #IF user's answer matches correct answer
+            #DISPLAY "Correct" message
+            #INCREMENT score
+        #ELSE
+            #DISPLAY "Incorrect" message and show correct answer
+
+        #PAUSE briefly
+        #CLEAR screen
+
+    #DISPLAY final score and feedback message
+
 import random
 import os
 import sys
